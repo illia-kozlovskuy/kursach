@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вікторина - SpikePoint</title>
+    <link rel="stylesheet" href="../css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="../css/components.css" type="text/css">
+    <link rel="stylesheet" href="../css/pages_css/quiz.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../images/svg/logo.svg" alt="logo"></a>
+        </div>
+        <nav>
+            <a class="logo_a" href="../pages/club_rules.html">Правила клубу</a>
+            <a class="logo_a" href="../pages/game_rules.html">Правила гри</a>
+            <a class="logo_a" href="../pages/about_us.html">Про клуб</a>
+            <a class="logo_a" href="../pages/gallery.html">Галерея</a>
+            <a class="logo_a" href="../pages/quiz.html">Вікторина</a>
+        </nav>
+        <div class="header-controls">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Перемикач теми">☀️</button>
+            <button class="burger" id="burger-btn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="quiz-container animate-on-scroll">
+            <h1>Вікторина: Правила Гри</h1>
+            <div id="quiz-container">
+                <div class="progress" id="progress">Питання 1 з 5</div>
+                <div class="question" id="question">Питання завантажується...</div>
+                <div class="options" id="options"></div>
+                <button class="next-btn" id="next-btn">Наступне питання</button>
+            </div>
+            <div class="result" id="result"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <img src="../images/svg/logo.svg" alt="logo">
+        <li>
+            <ul><a class="logo_a" href="../pages/club_rules.html">Правила клубу</a></ul>
+            <ul><a class="logo_a" href="../pages/game_rules.html">Правила гри</a></ul>
+            <ul><a class="logo_a" href="../pages/about_us.html">Про клуб</a></ul>
+            <ul><a class="logo_a" href="../pages/gallery.html">Галерея</a></ul>
+            <ul><a class="logo_a" href="../pages/quiz.html">Вікторина</a></ul>
+        </li>
+        <p>©   SpikePoint</p>
+    </footer>
+
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Вгору">↑</button>
+    <script src="../js/main.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>
