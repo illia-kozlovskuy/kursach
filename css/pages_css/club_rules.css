@@ -57,52 +57,89 @@ header nav {
     justify-content: space-between;
 }
 
+main {
+    position: relative;
+}
+
 main .main {
-    padding: 285px 10vw 160px 10vw;
+    position: relative;
+    padding: 300px 10vw 217px 10vw;
 }
 
-main .main .text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-bottom: 131px;
-}
-
-main .main .text_sub {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 230px;
-}
-
-main .main .text_sub h2 {
+main .main h1 {
     font-size: 64px;
+    line-height: 65px;
     text-transform: uppercase;
+    width: 840px;
+    margin-bottom: 40px;
 }
 
-main .main .text_sub p {
-    font-size: 20px;
-}
-
-main .main .text .error {
-    font-size: 350px;
-    color: #151227;
+main .main p {
+    margin-bottom: 50px;
+    width: 654px;
 }
 
 main .main a {
-    margin-left: 43%;
-    padding: 20px 55px;
-    background-color: #ed3f00;
+    width: 250px;
+    height: 60px;
+    background-color: #ee5700;
+    padding: 20px 54px;
 }
 
 main .main a:hover {
     background-color: #c04600;
+}
+
+main .rules {
+    padding: 0 10vw;
+}
+
+main .rules h2 {
+    margin-bottom: 105px;
+}
+
+main .rules ol {
+    margin-bottom: 80px;
+    width: 720px;
+}
+
+main .rules ol li {
+    margin-bottom: 60px;
+}
+
+main .true_rules {
+    padding: 250px 10vw;
+}
+
+main .true_rules h2 {
+    margin-bottom: 87px;
+}
+
+main .true_rules ul {
+    width: 840px;
+    margin-bottom: 140px;
+}
+
+main .true_rules ul li {
+    margin-bottom: 30px;
+}
+
+main .true_rules a {
+    margin-left: 42%;
+    width: 250px;
+    height: 60px;
+    background-color: #ee5700;
+    padding: 20px 54px;
+}
+
+main .true_rules a:hover {
+    background-color: #c04600;
+}
+
+main .main_bg {
+    position: absolute;
+    top: 175px;
+    right: 86px;
 }
 
 footer {
