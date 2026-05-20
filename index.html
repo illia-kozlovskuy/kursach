@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/components.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="./images/svg/logo.svg" alt="logo"></a>
+        </div>
+        <nav>
+            <a class="logo_a" href="./pages/club_rules.html">Правила клубу</a>
+            <a class="logo_a" href="./pages/game_rules.html">Правила гри</a>
+            <a class="logo_a" href="./pages/about_us.html">Про клуб</a>
+            <a class="logo_a" href="./pages/gallery.html">Галерея</a>
+            <a class="logo_a" href="./pages/quiz.html">Вікторина</a>
+        </nav>
+        <div class="header-controls">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Перемикач теми">☀️</button>
+            <button class="burger" id="burger-btn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="main">
+            <h1>Ласкаво просимо до клубу SpikePoint</h1>
+            <p>Приєднуйтесь до спільноти, де пристрасть, командна робота та любов до гри об'єднуються на майданчику.</p>
+            <a class="logo_a" href="./pages/contact.html">Зв’язатися з нами</a>
+            <img src="./images/png/Group 17.png" alt="photo">
+        </section>
+
+        <section class="events">
+            <h2>Найближчі події</h2>
+            <div class="cards">
+                <div class="card card1 animate-on-scroll">
+                    <div class="card_text">
+                        <p class="card_text_1">25.04.2026</p>
+                        <p class="card_text_2">13:00</p>
+                    </div>
+                    <h3>SpikePoint & VolleyRise</h3>
+                    <p>Riverpark Sports Hall</p>
+                    <div class="countdown" data-date="2026-04-25T13:00:00"></div>
+                </div>
+                <div class="card card2 animate-on-scroll">
+                    <div class="card_text">
+                        <p class="card_text_1">19.05.2026</p>
+                        <p class="card_text_2">16:00</p>
+                    </div>
+                    <h3>SpikePoint & CourtForce</h3>
+                    <p>Horizon High Main Court</p>
+                    <div class="countdown" data-date="2026-05-19T16:00:00"></div>
+                </div>
+                <div class="card card3 animate-on-scroll">
+                    <div class="card_text">
+                        <p class="card_text_1">15.06.2026</p>
+                        <p class="card_text_2">12:00</p>
+                    </div>
+                    <h3>SpikePoint & ServeStorm</h3>
+                    <p>Echo Valley Recreation</p>
+                    <div class="countdown" data-date="2026-06-15T12:00:00"></div>
+                </div>
+                <div class="card card4 animate-on-scroll">
+                    <div class="card_text">
+                        <p class="card_text_1">17.02.2029</p>
+                        <p class="card_text_2">21:00</p>
+                    </div>
+                    <h3>SpikePoint & NetFusion</h3>
+                    <p>Northside Gymnasium</p>
+                    <div class="countdown" data-date="2029-02-17T21:00:00"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery_text animate-on-scroll">
+                <h2>Галерея</h2>
+                <h2 class="data">25.04</h2>
+            </div>
+            <div class="cards">
+                <div class="card animate-on-scroll"><img src="./images/bg/card1.jpg" alt="photo"></div>
+                <div class="card animate-on-scroll"><img src="./images/bg/card2.jpg" alt="photo"></div>
+                <div class="card animate-on-scroll"><img src="./images/bg/card3.jpg" alt="photo"></div>
+                <div class="card animate-on-scroll"><img src="./images/bg/card4.jpg" alt="photo"></div>
+            </div>
+            <a class="logo_a" href="./pages/gallery.html">Уся галерея</a>
+        </section>
+    </main>
+
+    <footer>
+        <img src="./images/svg/logo.svg" alt="logo">
+        <li>
+            <ul><a class="logo_a" href="./pages/club_rules.html">Правила клубу</a></ul>
+            <ul><a class="logo_a" href="./pages/game_rules.html">Правила гри</a></ul>
+            <ul><a class="logo_a" href="./pages/about_us.html">Про клуб</a></ul>
+            <ul><a class="logo_a" href="./pages/gallery.html">Галерея</a></ul>
+            <ul><a class="logo_a" href="./pages/quiz.html">Вікторина</a></ul>
+        </li>
+        <p>©   SpikePoint</p>
+    </footer>
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Вгору">↑</button>
+    <script src="./js/main.js"></script>
+    <script src="./js/countdown.js"></script>
+</body>
+</html>

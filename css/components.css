@@ -1,0 +1,397 @@
+/* ===== Бургер-меню ===== */
+html {
+    scroll-padding-top: 90px;
+}
+
+.logo_a {
+    white-space: nowrap;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 7px);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -7px);
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(9, 8, 15, 0.95);
+        transition: right 0.4s ease;
+        z-index: 90;
+        gap: 30px;
+    }
+
+    header nav.open {
+        right: 0;
+    }
+
+    header nav a {
+        font-size: 22px;
+    }
+}
+
+/* ===== Scroll-to-top кнопка ===== */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #ee5700;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+    background-color: #c04600;
+    transform: translateY(-5px);
+}
+
+/* ===== Анімації появи при скролі ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Затримки для карток (щоб з'являлися по черзі) */
+.cards .card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.cards .card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.cards .card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.cards .card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+/* ===== Кнопка перемикання теми ===== */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Світла тема (Light Mode Overrides) ===== */
+body.light-theme {
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+}
+
+body.light-theme .logo_a {
+    color: #1a1a1a;
+}
+
+body.light-theme .logo_a:hover {
+    color: white;
+}
+
+body.light-theme header {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .burger span {
+    background-color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+    body.light-theme header nav {
+        background-color: rgba(255, 255, 255, 0.98);
+    }
+}
+
+body.light-theme main .gallery_text .data,
+body.light-theme main .events .cards .card3 p {
+    color: #666;
+}
+
+body.light-theme .together h2 {
+    color: #1a1a1a;
+}
+
+body.light-theme .together p {
+    color: #555;
+}
+
+body.light-theme .main_text h1,
+body.light-theme .main_text p {
+    color: white;
+}
+
+body.light-theme footer p,
+body.light-theme footer .logo_a {
+    color: white;
+    /* Footer has dark image bg */
+}
+
+/* ===== Таймер зворотного відліку ===== */
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    height: 55px;
+}
+
+.timer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.timer-block .num {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.timer-block .label {
+    font-size: 10px;
+    color: #ffc8b4;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.countdown .expired {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+}
+
+/* Світла тема для карток */
+body.light-theme .countdown {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .timer-block .num,
+body.light-theme .timer-block .label,
+body.light-theme .countdown .expired {
+    color: #111;
+}
+
+/* ===== Lightbox ===== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: #ee5700;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background-color: rgba(238, 87, 0, 0.8);
+    color: white;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+/* ===== Toast Сповіщення ===== */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateX(120%);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-left: 5px solid #ee5700;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast-icon {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.toast-message {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.toast-success {
+    border-left-color: #09c372;
+}
+
+.toast-error {
+    border-left-color: #ff3860;
+}
+
+.toast-info {
+    border-left-color: #3273dc;
+}
+
+body.light-theme .toast {
+    background-color: white;
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
